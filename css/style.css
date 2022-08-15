@@ -76,9 +76,9 @@ ul {
 
 .modal {
   position: fixed;
-  top: 10vh;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   z-index: 15;
 
   box-sizing: border-box;
@@ -1219,3 +1219,44 @@ ul {
     width: calc(50% - 4px);
   }
 }
+
+@media (max-height: 700px) {
+  .modal {
+    /* Если высоты экрана будет не хватать, чтобы корректно отображалось */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Такой вопрос, в условиях сказано следующее:
+
+"Для устройств с шириной экрана, попадающей в диапазон от 641px до 1200px, при портретной ориентации
+ экрана карточки трендов должны быть выстроены в две колонки, а при пейзажной ориентации — в четыре.
+
+Для устройств с шириной экрана от 640px и меньше, при портретной ориентации экрана должна быть одна
+ колонка с карточками, а при пейзажной — две."
+
+Если следовать этим условиям и добавить медиазапросы ниже, то места для текста в карточках не хватает.
+Конечно, можно сделать так, чтобы текст поместился, но все же хотелось бы удостовериться -
+условия правильно сформулированы или это я что-то не понимаю? */
+
+/* @media (max-width: 1200px) and (orientation: landscape) {
+  .trends__card {
+    width: calc(25% - 12px);
+  }
+}
+
+@media (max-width: 1200px) and (orientation: portrait),
+(max-width: 640px) and (orientation: landscape) {
+  .trends__card {
+    width: calc(50% - 4px);
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trends__card {
+    width: 100%;
+  }
+} */
