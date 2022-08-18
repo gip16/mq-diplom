@@ -110,6 +110,7 @@ ul {
 }
 
 .modal__input-title {
+  display: block;
   margin-top: 28px;
   padding-bottom: 7px;
   font-size: 13px;
@@ -429,6 +430,8 @@ ul {
   color: #ffffff;
   text-transform: uppercase;
   transition: all .2s;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .trends__post-title:hover {
@@ -446,7 +449,7 @@ ul {
 }
 
 .blog {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 
 .blog__post {
@@ -554,6 +557,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 60px;
+  flex: 1 0 auto;
 }
 
 .aside__title {
@@ -1183,6 +1187,10 @@ ul {
     height: unset;
   }
 
+  .blog__content-box {
+    max-width: 100%;
+  }
+
   .blog__title {
     margin-bottom: 20px;
     line-height: 1.2;
@@ -1238,9 +1246,9 @@ ul {
 Для устройств с шириной экрана от 640px и меньше, при портретной ориентации экрана должна быть одна
  колонка с карточками, а при пейзажной — две."
 
-Если следовать этим условиям и добавить медиазапросы ниже, то места для текста в карточках не хватает.
-Конечно, можно сделать так, чтобы текст поместился, но все же хотелось бы удостовериться -
-условия правильно сформулированы или это я что-то не понимаю? */
+Если следовать этим условиям и добавить медиазапросы ниже, то может возникнуть ситуация, при которой
+ карточки будут отображаться не совсем корректно (). Поэтому хочется удостовериться - верны ли условия?
+ Нужно ли их добавлять? */
 
 /* @media (max-width: 1200px) and (orientation: landscape) {
   .trends__card {
