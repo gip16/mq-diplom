@@ -557,7 +557,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  flex: 1 0 auto;
 }
 
 .aside__title {
