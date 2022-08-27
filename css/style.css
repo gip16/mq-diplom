@@ -1229,7 +1229,6 @@ ul {
 
 @media (max-height: 700px) {
   .modal {
-    /* Если высоты экрана будет не хватать, чтобы корректно отображалось */
     position: absolute;
     top: 50px;
     left: 50%;
@@ -1237,7 +1236,7 @@ ul {
   }
 }
 
-/* @media (max-width: 1200px) and (orientation: landscape) {
+@media (max-width: 1200px) and (orientation: landscape) {
   .trends__card {
     width: calc(25% - 12px);
   }
@@ -1250,8 +1249,46 @@ ul {
   }
 }
 
+@media (max-width: 980px) and (min-width: 641px) and (orientation: landscape) {
+  .trends__card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .trends__post {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .trends__post-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 780px) and (min-width: 641px) and (orientation: landscape) {
+  .trends__card {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .trends__post-title {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 640px) and (orientation: portrait) {
   .trends__card {
     width: 100%;
   }
-} */
+}
+
+@media (max-width: 470px) and (orientation: landscape) {
+  .trends__post {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .trends__post-title {
+    font-size: 14px;
+  }
+}
